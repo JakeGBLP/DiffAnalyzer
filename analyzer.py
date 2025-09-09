@@ -25,8 +25,7 @@ def is_valid_tag(version: str) -> bool:
     return True
 
 def is_valid_file(filename: str) -> bool:
-    # note: the filename is not lowercase here
-    return filename.startswith(".")
+    return not filename.startswith(".")
 
 
 def process_repo(repo_url: str, output_file: str = "result.json"):
